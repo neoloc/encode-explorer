@@ -2535,7 +2535,7 @@ class Location
 		{
 			$this->path = $this->splitPath(EncodeExplorer::getConfig('starting_dir'));
 		}
-		elseif (preg_match('/^private/', $_GET['dir'])) {
+		elseif (preg_match('/^(\.\.\/|){1,}private/', $_GET['dir'])) {
 			$this->path = $this->splitPath(EncodeExplorer::getConfig('starting_dir'));
 		}
 		else
